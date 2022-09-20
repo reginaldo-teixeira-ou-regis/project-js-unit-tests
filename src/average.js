@@ -1,5 +1,4 @@
-/*
-  A função average recebe um array de tamanho variável e retorna a média dos valores recebidos.
+/* A função average recebe um array de tamanho variável e retorna a média dos valores recebidos.
   Caso a função receba algum valor não numérico ou um array vazio, o valor undefined deve ser retornado.
   Todos os resultados devem ser arredondados para valores inteiros. Ex: 4,6 vira 5; 1,3 vira 1.
 
