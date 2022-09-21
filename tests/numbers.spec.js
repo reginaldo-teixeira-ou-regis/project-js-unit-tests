@@ -20,15 +20,15 @@ describe('2 - Implemente os casos de teste para a função `numbers`', () => {
   // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
   // Escreva um teste em que a função recebe [' '] e retorna false
   test('The function numbers receive the parameters [1, 2, 3, 4, 5] is return true', () => {
-    expect(numbers([1, 2, 3, 4, 5])).toBeTruthy;
+    expect(numbers([1, 2, 3, 4, 5])).toBeTruthy();
   });
   test("The function numbers receive the parameters [1, 2, '3', 4, 5] is return false", () => {
-    expect(numbers([1, 2, '3', 4, 5])).toBeFalsy;
+    expect(numbers([1, 2, '3', 4, 5])).toBeFalsy();
   });
   test("The function numbers receive the parameters [1, 'a', 3] is return false", () => {
-    expect(numbers([1, 'a', 3])).toBeFalsy;
+    expect(numbers([1, 'a', 3])).toBeFalsy();
   });
   test("The function numbers receive the parameters [' '] is return false", () => {
-    expect(numbers([' '])).toBeFalsy;
+    expect(numbers([' '])).toBeFalsy();
   });
 });
