@@ -15,13 +15,9 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-/* const reicevePhrase = () => 'Eita pessoa boa!'; */
-
 const createStudent = (nick) => {
-  const objectName = { name: nick };
-  const objectPhrase = { feedback: 'Eita pessoa boa!' };
-  const newObject = {};
-  return Object.assign(newObject, objectName, objectPhrase);
+  const object = { name: nick, feedback: () => 'Eita pessoa boa!' };
+  return object;
 };
 
 console.log(typeof createStudent('Leandrão, o Lobo Solitário'));
