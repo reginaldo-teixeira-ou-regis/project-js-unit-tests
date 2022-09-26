@@ -97,7 +97,7 @@ let restaurant = {};
 
 const orderFromMenu = (request) => restaurant.consumption.push(request);
 
-const calculaTotal = (obj, keys) => {
+const totalCalculation = (obj, keys) => {
   let total = 0;
   for (const key of keys) {
     total += obj[key];
@@ -114,8 +114,8 @@ const totalPay = () => {
   const listDrink = restaurant.consumption.filter(
     (key) => Object.keys(restaurant.fetchMenu().drink).includes(key),
   );
-  const totalFood = calculaTotal(restaurant.fetchMenu().food, listFood);
-  const totalDrink = calculaTotal(restaurant.fetchMenu().drink, listDrink);
+  const totalFood = totalCalculation(restaurant.fetchMenu().food, listFood);
+  const totalDrink = totalCalculation(restaurant.fetchMenu().drink, listDrink);
   return Number(((totalFood + totalDrink) * 1.1).toFixed(2));
 };
 
@@ -127,9 +127,9 @@ const createMenu = (myMenu) => {
   });
   return restaurant;
 };
-/* const vari = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
-vari.order('coxinha');
-vari.order('agua');
+/* const menu = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+menu.order('coxinha');
+menu.order('agua');
 console.log(restaurant.pay()); */
 
 module.exports = createMenu;
