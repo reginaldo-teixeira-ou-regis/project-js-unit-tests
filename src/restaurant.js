@@ -107,9 +107,13 @@ const calculaTotal = (obj, keys) => {
   
 const totalPay = () => {
   /* const listFood = Object.keys(restaurant.fetchMenu().food).filter((key) => restaurant.consumption.includes(key)); */
-  const listFood = restaurant.consumption.filter((key) => Object.keys(restaurant.fetchMenu().food).includes(key));
+  const listFood = restaurant.consumption.filter(
+    (key) => Object.keys(restaurant.fetchMenu().food).includes(key),
+  );
   /* const listDrink = Object.keys(restaurant.fetchMenu().drink).filter((key) => restaurant.consumption.includes(key)); */
-  const listDrink = restaurant.consumption.filter((key) => Object.keys(restaurant.fetchMenu().drink).includes(key));
+  const listDrink = restaurant.consumption.filter(
+    (key) => Object.keys(restaurant.fetchMenu().drink).includes(key),
+  );
   const totalFood = calculaTotal(restaurant.fetchMenu().food, listFood);
   const totalDrink = calculaTotal(restaurant.fetchMenu().drink, listDrink);
   return Number(((totalFood + totalDrink) * 1.1).toFixed(2));
